@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10110e">
+<title>Dhruva H V — Developer / Builder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#10110e;--paper:#e9e8df;--ink:#171912;--lime:#c8f169;--muted:#a4a69a;--line:rgba(233,232,223,.17);--panel:#191b15;--mono:"DM Mono",monospace;--display:"Space Grotesk",sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--paper);font-family:Manrope,sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}::selection{background:var(--lime);color:var(--ink)}
+.noise{position:fixed;inset:0;pointer-events:none;z-index:10;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E")}
+.wrap{width:min(1160px,calc(100% - 64px));margin:auto}.mono{font:10px var(--mono);letter-spacing:1.2px;text-transform:uppercase;color:var(--muted)}
+header{height:82px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}.brand{font:700 18px var(--display);letter-spacing:-1px}.brand em{font-style:normal;color:var(--lime)}.brand small{font:9px var(--mono);color:var(--muted);letter-spacing:1.3px;display:block;margin-top:2px}.nav{display:flex;align-items:center;gap:28px}.nav a{font-size:11px;color:#c2c4b9;transition:.2s}.nav a:hover{color:var(--lime)}.nav .contact-link{border:1px solid var(--lime);color:var(--lime);padding:10px 14px}
+.hero{padding:95px 0 85px;position:relative;min-height:620px;display:flex;flex-direction:column;justify-content:center}.hero-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}.available{display:flex;gap:9px;align-items:center;color:var(--lime)}.live-dot{width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 14px var(--lime)}
+.hero h1{font:700 clamp(64px,11vw,142px)/.88 var(--display);letter-spacing:-.09em;margin:0;max-width:1050px}.hero h1 .outline{color:transparent;-webkit-text-stroke:1px rgba(233,232,223,.75)}.hero h1 .lime{color:var(--lime)}.hero-bottom{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:42px;align-items:end}.intro{max-width:480px;font-size:14px;line-height:1.9;color:#b5b7aa}.intro strong{color:var(--paper)}.hero-meta{display:flex;justify-content:flex-end;gap:35px}.hero-meta b{display:block;font:600 22px var(--display);color:var(--lime);margin-bottom:5px}.hero-meta span{font:9px var(--mono);color:var(--muted);letter-spacing:1px}.scroll-mark{position:absolute;right:0;top:50%;writing-mode:vertical-rl;color:#7d8074;font:9px var(--mono);letter-spacing:2px}
+.marquee{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--lime);color:var(--ink);padding:13px 0;white-space:nowrap}.marquee-track{display:flex;width:max-content;animation:move 32s linear infinite}.marquee span{font:700 12px var(--mono);letter-spacing:1px;padding:0 25px}.marquee i{font-style:normal;font-size:16px}@keyframes move{to{transform:translateX(-50%)}}
+section{padding:100px 0}.section-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:42px}.section-num{color:var(--lime)}h2{font:600 clamp(36px,5vw,62px)/1 var(--display);letter-spacing:-.065em;margin:12px 0 0}.section-aside{max-width:250px;color:var(--muted);font-size:11px;line-height:1.8}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}.about-statement{font:500 clamp(25px,3vw,39px)/1.28 var(--display);letter-spacing:-1.6px}.about-statement span{color:var(--lime)}.about-copy{font-size:13px;line-height:2;color:#aeb0a4}.about-copy p{margin:0 0 17px}.signature{font:italic 22px Georgia;color:var(--lime);margin-top:25px}
+.skill-layout{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}.skill-box{min-height:190px;padding:23px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:.25s}.skill-box:hover{background:var(--lime);color:var(--ink)}.skill-box:hover .mono,.skill-box:hover li{color:#44483a}.skill-box .mono{color:var(--lime)}.skill-box h3{font:600 18px var(--display);margin:35px 0 13px;letter-spacing:-.5px}.skill-box ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:7px 12px}.skill-box li{font-size:10px;color:#aeb0a4}
+.project-list{border-top:1px solid var(--line)}.project{display:grid;grid-template-columns:70px 1fr 1fr 40px;gap:22px;align-items:center;padding:28px 8px;border-bottom:1px solid var(--line);transition:.25s}.project:hover{background:rgba(200,241,105,.045);padding-left:18px;padding-right:18px}.project-no{font:11px var(--mono);color:var(--lime)}.project h3{font:600 clamp(19px,2.5vw,27px) var(--display);letter-spacing:-1px;margin:0 0 6px}.project .category{font:9px var(--mono);letter-spacing:1px;color:var(--muted)}.project p{font-size:11px;line-height:1.8;color:#aeb0a4;margin:0}.project .arrow{font-size:23px;color:var(--lime);transition:.2s}.project:hover .arrow{transform:translate(4px,-4px)}
+.journey-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}.edu-item{padding:19px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:15px}.edu-item h3{font:600 15px var(--display);margin:0 0 6px}.edu-item p{font-size:10px;color:var(--muted);margin:0}.score{font:11px var(--mono);color:var(--lime);white-space:nowrap}.achievement{border-top:1px solid var(--line);padding:20px 0}.achievement h3{font:600 16px var(--display);margin:0 0 7px}.achievement p{font-size:11px;color:var(--muted);line-height:1.8;margin:0}.achievement .mono{color:var(--lime)}
+.interest-row{display:flex;flex-wrap:wrap;gap:10px}.interest{border:1px solid var(--line);padding:14px 18px;border-radius:100px;font:11px var(--mono);color:#c6c8bc;transition:.2s}.interest:hover{background:var(--lime);border-color:var(--lime);color:var(--ink)}
+.contact-block{background:var(--lime);color:var(--ink);padding:55px 6%;display:flex;justify-content:space-between;align-items:flex-end;gap:25px}.contact-block .mono{color:#4c5734}.contact-block h2{font-size:clamp(38px,6vw,76px);max-width:650px}.contact-block p{font-size:12px;color:#4f5740}.contact-buttons{display:flex;flex-direction:column;gap:9px;min-width:180px}.contact-buttons a{display:flex;justify-content:space-between;align-items:center;background:var(--ink);color:var(--paper);padding:14px 16px;font-size:11px;font-weight:700;transition:.2s}.contact-buttons a:hover{background:#33392a;transform:translateX(4px)}
+footer{padding:25px 0 35px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:#777b6e;font:9px var(--mono);letter-spacing:.8px}
+
+.cert-launch{margin-top:30px;padding:23px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:20px}
+.cert-launch h3{font:600 21px var(--display);margin:8px 0 5px}.cert-launch p{font-size:11px;color:var(--muted);margin:0}
+.cert-button{display:flex;align-items:center;gap:28px;border:1px solid var(--lime);background:var(--lime);color:var(--ink);padding:14px 17px;font:700 10px var(--mono);letter-spacing:.7px;cursor:pointer;transition:.2s}
+.cert-button b{font-size:15px}.cert-button:hover{background:transparent;color:var(--lime);transform:translateY(-2px)}
+.cert-modal{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;padding:24px}.cert-modal.open{display:flex}
+.cert-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.78);backdrop-filter:blur(9px)}
+.cert-dialog{position:relative;width:min(1100px,100%);height:min(780px,92vh);background:#171912;border:1px solid rgba(200,241,105,.28);box-shadow:0 30px 100px rgba(0,0,0,.6);padding:25px;display:flex;flex-direction:column}
+.cert-dialog-head{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid var(--line);padding-bottom:19px;gap:20px}
+.cert-dialog-head h2{font-size:34px;margin:8px 0}.cert-dialog-head h2 span{color:var(--lime)}.cert-dialog-head p{font-size:11px;color:var(--muted);margin:0}
+.cert-close{background:transparent;color:var(--paper);border:1px solid var(--line);font-size:27px;width:38px;height:38px;cursor:pointer}
+.cert-content{display:block;min-height:0;flex:1;padding-top:18px}
+.cert-list{height:100%;overflow:auto;padding:0 7px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-content:start;gap:10px}.cert-item{width:100%;min-height:104px;display:block;text-align:left;background:transparent;border:1px solid var(--line);padding:16px;color:var(--paper);cursor:pointer;transition:.2s}
+.cert-item:hover{border-color:var(--lime);background:rgba(200,241,105,.07);transform:translateY(-2px)}.cert-item small{display:block;color:var(--lime);font:9px var(--mono);letter-spacing:.8px;margin-bottom:6px}.cert-item strong{font:600 12px var(--display);line-height:1.5}.cert-item span{display:block;color:var(--muted);font-size:9px;margin-top:5px}
+@media(max-width:760px){.cert-modal{padding:10px}.cert-dialog{height:95vh;padding:16px}.cert-list{grid-template-columns:1fr;gap:8px}.cert-item{min-height:86px}.cert-dialog-head h2{font-size:27px}.cert-launch{align-items:flex-start;flex-direction:column}}
+
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
+@media(max-width:800px){.wrap{width:calc(100% - 40px)}.hero{min-height:auto;padding:80px 0}.hero-bottom{grid-template-columns:1fr}.hero-meta{justify-content:flex-start}.skill-layout{grid-template-columns:repeat(2,1fr)}.project{grid-template-columns:45px 1fr 35px}.project p{grid-column:2/3;grid-row:2}.project .arrow{grid-column:3;grid-row:1}.journey-grid{gap:35px}}
+@media(max-width:560px){.wrap{width:calc(100% - 30px)}header{height:70px}.nav{gap:12px}.nav a:not(.contact-link){display:none}.nav .contact-link{font-size:10px;padding:9px}.hero{padding:68px 0 60px}.hero h1{font-size:clamp(57px,16vw,85px)}.hero-top{align-items:flex-start;gap:10px;flex-direction:column}.hero-bottom{margin-top:30px;gap:25px}.hero-meta{gap:22px}.scroll-mark{display:none}section{padding:70px 0}.section-top{flex-direction:column;gap:15px;margin-bottom:30px}.section-aside{max-width:100%}.about-grid,.journey-grid{grid-template-columns:1fr;gap:25px}.about-statement{font-size:29px}.skill-layout{grid-template-columns:1fr 1fr}.skill-box{padding:16px;min-height:170px}.skill-box h3{font-size:15px;margin:27px 0 10px}.project{grid-template-columns:34px 1fr 25px;gap:12px;padding:22px 0}.project p{font-size:10px}.contact-block{padding:35px 24px;align-items:flex-start;flex-direction:column}.contact-buttons{width:100%}footer{font-size:8px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="noise"></div>
+<div class="wrap">
+<header>
+  <a class="brand" href="#">DHRUVA<em>.</em><small>DEVELOPER / BUILDER</small></a>
+  <nav class="nav"><a href="#about">About</a><a href="#skills">Capabilities</a><a href="#work">Selected work</a><a href="#journey">Journey</a><a href="https://github.com/dhruvahv8-prog" target="_blank" rel="noopener">GitHub ↗</a><a class="contact-link" href="#contact">LET'S TALK ↗</a></nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-top"><div class="mono available"><span class="live-dot"></span> OPEN TO LEARNING & OPPORTUNITIES</div><div class="mono">BENGALURU, INDIA &nbsp; / &nbsp; 2026</div></div>
+  <h1>CODE WITH<br><span class="outline">PURPOSE.</span><br><span class="lime">BUILD</span> WITH<br>IMAGINATION<span class="lime">.</span></h1>
+  <div class="hero-bottom">
+    <p class="intro">I'm <strong>Dhruva H V</strong> — an Information Science & Engineering student who enjoys connecting software, hardware and ideas. I build practical digital experiences and explore technology that solves real-world problems.</p>
+    <div class="hero-meta"><div><b>8.23</b><span>CGPA / 10</span></div><div><b>2028</b><span>GRADUATION</span></div><div><b>ISE</b><span>BNMIT / BENGALURU</span></div></div>
+  </div>
+  <div class="scroll-mark">SCROLL TO EXPLORE ↓</div>
+</section>
+</main>
+</div>
+
+<div class="marquee"><div class="marquee-track"><span>SOFTWARE DEVELOPMENT <i>✳</i></span><span>EMBEDDED SYSTEMS <i>✳</i></span><span>INTERNET OF THINGS <i>✳</i></span><span>ARTIFICIAL INTELLIGENCE <i>✳</i></span><span>REAL-WORLD PROBLEM SOLVING <i>✳</i></span><span>SOFTWARE DEVELOPMENT <i>✳</i></span><span>EMBEDDED SYSTEMS <i>✳</i></span><span>INTERNET OF THINGS <i>✳</i></span><span>ARTIFICIAL INTELLIGENCE <i>✳</i></span><span>REAL-WORLD PROBLEM SOLVING <i>✳</i></span></div></div>
+
+<div class="wrap">
+<section id="about" class="reveal">
+  <div class="section-top"><div><div class="mono section-num">01 / A LITTLE ABOUT ME</div><h2>Curiosity is my<br>starting point.</h2></div><p class="section-aside">Student by status. Builder by instinct. Always exploring what technology can make possible.</p></div>
+  <div class="about-grid">
+    <div class="about-statement">I like making things that live beyond the screen — <span>from connected devices to useful applications.</span></div>
+    <div class="about-copy"><p>I'm pursuing a B.E. in Information Science and Engineering at B.N.M. Institute of Technology, Bengaluru. My interests sit at the intersection of software development, embedded systems, IoT and artificial intelligence.</p><p>I learn best by building. Whether it's automating a parking system, monitoring infrastructure with sensors, or creating tools for local businesses, I enjoy turning a problem into something people can actually use.</p><div class="signature">Dhruva H V</div></div>
+  </div>
+</section>
+
+<section id="skills" class="reveal">
+  <div class="section-top"><div><div class="mono section-num">02 / MY TOOLKIT</div><h2>Things I work with.</h2></div><p class="section-aside">A growing toolkit across code, connected hardware and intelligent applications.</p></div>
+  <div class="skill-layout">
+    <div class="skill-box"><div class="mono">01 — CODE</div><h3>Programming</h3><ul><li>C++</li><li>Python</li><li>Java / Basics</li></ul></div>
+    <div class="skill-box"><div class="mono">02 — WEB</div><h3>Web development</h3><ul><li>HTML</li><li>CSS</li><li>JavaScript</li><li>SQL</li></ul></div>
+    <div class="skill-box"><div class="mono">03 — CONNECT</div><h3>Embedded & IoT</h3><ul><li>Raspberry Pi 5</li><li>Ultrasonic sensors</li><li>IR sensors</li><li>Gas sensors</li><li>Servo motors</li></ul></div>
+    <div class="skill-box"><div class="mono">04 — EXPLORE</div><h3>Artificial intelligence</h3><ul><li>AI concepts</li><li>Model integration</li><li>Performance tracking</li></ul></div>
+  </div>
+</section>
+
+<section id="work" class="reveal">
+  <div class="section-top"><div><div class="mono section-num">03 / SELECTED WORK</div><h2>Built to solve<br>something real.</h2></div><p class="section-aside">A selection of academic and personal projects. Each one started with a problem worth exploring.</p></div>
+  <div class="project-list">
+    <article class="project"><div class="project-no">01</div><div><h3>VacanSee — Smart Parking</h3><div class="category">EMBEDDED SYSTEMS / AUTOMATION</div></div><p>Smart parking simulator with vehicle detection, real-time slot monitoring and servo-based automated gate control.</p><div class="arrow">↗</div></article>
+    <article class="project"><div class="project-no">02</div><div><h3>Smart Sewage Monitoring</h3><div class="category">IoT / SMART INFRASTRUCTURE</div></div><p>Low-cost monitoring concept to identify potential sewer blockages and harmful or flammable gases using sensors.</p><div class="arrow">↗</div></article>
+    <article class="project"><div class="project-no">03</div><div><h3>E-Billing & Store Management</h3><div class="category">WEB DEVELOPMENT / RETAIL</div></div><p>Retailer-focused application for invoice generation, item management, discounts and digital billing workflows.</p><div class="arrow">↗</div></article>
+    <article class="project"><div class="project-no">04</div><div><h3>Athlix — Sports Performance</h3><div class="category">AI APPLICATION / IN PROGRESS</div></div><p>Sports platform in development for athlete training, goal and session management, and AI-based performance tracking.</p><div class="arrow">↗</div></article>
+  </div>
+</section>
+
+<section id="journey" class="reveal">
+  <div class="section-top"><div><div class="mono section-num">04 / THE JOURNEY</div><h2>Learning in progress.</h2></div><p class="section-aside">The foundation so far — with plenty more ahead.</p></div>
+  <div class="journey-grid">
+    <div><div class="mono" style="color:var(--lime);margin-bottom:16px">EDUCATION</div>
+      <div class="edu-item"><div><h3>B.E. — Information Science & Engineering</h3><p>B.N.M. Institute of Technology, Bengaluru · Expected 2028</p></div><span class="score">8.23 CGPA</span></div>
+      <div class="edu-item"><div><h3>2nd PUC</h3><p>Excellent PU College, Moodabidri · 2024</p></div><span class="score">83%</span></div>
+      <div class="edu-item"><div><h3>SSLC</h3><p>Nation High School, Konandur · 2022</p></div><span class="score">69%</span></div>
+    </div>
+    <div><div class="mono" style="color:var(--lime);margin-bottom:16px">RECOGNITION & LEARNING</div>
+      <div class="achievement"><div class="mono">01 / TRAINING</div><h3>Samsung Innovation Campus</h3><p>Completed hands-on training in core Artificial Intelligence concepts and tools.</p></div>
+      <div class="achievement"><div class="mono">02 / PARTICIPATION</div><h3>FKCCI Manthan Competition</h3><p>Participated and gained experience presenting technical ideas in a competitive setting.</p></div>
+    </div>
+  </div>
+  <div class="cert-launch">
+    <div><h3>Certificates &amp; credentials</h3><p>Courses, technical training, and participation certificates in one place.</p></div>
+    <button class="cert-button" id="openCertificates" type="button"><span>VIEW CERTIFICATES</span><b>11 ↗</b></button>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="section-top"><div><div class="mono section-num">05 / WHAT KEEPS ME CURIOUS</div><h2>Outside the code.</h2></div></div>
+  <div class="interest-row"><span class="interest">SOFTWARE DEVELOPMENT</span><span class="interest">EMBEDDED SYSTEMS</span><span class="interest">INTERNET OF THINGS</span><span class="interest">ARTIFICIAL INTELLIGENCE</span><span class="interest">AUTOMATION</span><span class="interest">BUILDING REAL-WORLD SOLUTIONS</span></div>
+</section>
+
+<section id="contact" class="reveal" style="padding-top:15px">
+  <div class="contact-block"><div><div class="mono">HAVE A PROJECT / IDEA / OPPORTUNITY?</div><h2>Let's make<br>something matter.</h2><p>Have a good idea? I'd love to hear about it.</p></div><div class="contact-buttons"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=dhruvahv8%40gmail.com" target="_blank" rel="noopener">EMAIL DHRUVA <span>↗</span></a><a href="https://www.linkedin.com/in/dhruva-hv" target="_blank" rel="noopener">CONNECT ON LINKEDIN <span>↗</span></a><a href="https://github.com/dhruvahv8-prog" target="_blank" rel="noopener">EXPLORE GITHUB <span>↗</span></a></div></div>
+</section>
+
+<div class="cert-modal" id="certModal" aria-hidden="true">
+  <div class="cert-backdrop" data-close="true"></div>
+  <div class="cert-dialog" role="dialog" aria-modal="true" aria-labelledby="certTitle">
+    <div class="cert-dialog-head">
+      <div><div class="mono" style="color:var(--lime)">LEARNING ARCHIVE / 11 ITEMS</div><h2 id="certTitle">Certificates<span>.</span></h2><p>Select a certificate to open the original document in a new tab.</p></div>
+      <button class="cert-close" id="closeCertificates" aria-label="Close certificates">×</button>
+    </div>
+    <div class="cert-content"><div class="cert-list" id="certList"></div></div>
+  </div>
+</div>
+
+<footer><span>© 2026 DHRUVA H V / PERSONAL PORTFOLIO</span><span>DESIGNED WITH INTENTION · BUILT WITH HTML, CSS & JS</span><span>BENGALURU, INDIA</span></footer>
+</div>
+<script>
+
+const certificateData = [
+ {title:"1M1B | AI for Sustainability",issuer:"1M1B",kind:"IMAGE",file:"certificates/1M1B_AI_for_Sustainability.jpeg"},
+ {title:"Artificial Intelligence for All",issuer:"Infosys Springboard",kind:"COURSE",file:"certificates/Infosys_Artificial_Intelligence_for_All.pdf"},
+ {title:"Exploring Internet of Things with Cisco Packet Tracer",issuer:"Cisco Networking Academy",kind:"COURSE",file:"certificates/Cisco_Exploring_IoT_with_Packet_Tracer.pdf"},
+ {title:"Exploring Networking with Cisco Packet Tracer",issuer:"Cisco Networking Academy",kind:"COURSE",file:"certificates/Cisco_Exploring_Networking_with_Packet_Tracer.pdf"},
+ {title:"Fundamentals of Cryptography",issuer:"Infosys Springboard",kind:"COURSE",file:"certificates/Infosys_Fundamentals_of_Cryptography.pdf"},
+ {title:"Fundamentals of Information Security",issuer:"Infosys Springboard",kind:"COURSE",file:"certificates/Infosys_Fundamentals_of_Information_Security.pdf"},
+ {title:"Getting Started with Cisco Packet Tracer",issuer:"Cisco Networking Academy",kind:"COURSE",file:"certificates/Cisco_Getting_Started_with_Packet_Tracer.pdf"},
+ {title:"Internal Internship-I: C++ and Embedded Systems",issuer:"B.N.M. Institute of Technology",kind:"INTERNSHIP",file:"certificates/BNMIT_Internal_Internship_CPP_Embedded_Systems.pdf"},
+ {title:"Introduction to Cyber Security",issuer:"Infosys Springboard",kind:"COURSE",file:"certificates/Infosys_Introduction_to_Cyber_Security.pdf"},
+ {title:"Algo Royale — Magnovite 2025",issuer:"CHRIST (Deemed to be University)",kind:"PARTICIPATION",file:"certificates/Magnovite_Algo_Royale_Participation.pdf"},
+ {title:"Inno Manthan 2026 — Knowledge Workshops",issuer:"FKCCI",kind:"PARTICIPATION",file:"certificates/FKCCI_Inno_Manthan_2026_Participation.pdf"}
+];
+const certModal=document.getElementById('certModal');
+const certList=document.getElementById('certList');
+certificateData.forEach((cert,index)=>{
+ const link=document.createElement('a');link.className='cert-item';link.href=cert.file;link.target='_blank';link.rel='noopener';
+ link.innerHTML=`<small>${String(index+1).padStart(2,'0')} / ${cert.kind}</small><strong>${cert.title}</strong><span>${cert.issuer} &nbsp; ↗</span>`;
+ certList.appendChild(link);
+});
+function openCerts(){certModal.classList.add('open');certModal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';}
+function closeCerts(){certModal.classList.remove('open');certModal.setAttribute('aria-hidden','true');document.body.style.overflow='';}
+document.getElementById('openCertificates').addEventListener('click',openCerts);
+document.getElementById('closeCertificates').addEventListener('click',closeCerts);
+certModal.addEventListener('click',e=>{if(e.target.dataset.close==='true')closeCerts();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&certModal.classList.contains('open'))closeCerts();});
+
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
